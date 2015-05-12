@@ -3,3 +3,6 @@ As instructed by our dear teachers ([see here for full description] (https://git
 
 All the work will be divided in 4 [Milestones] (..blob/master/Docs/Milestones.md) and we will try using a "SCRUM"-like attitude, if possible.
 
+Unfortunately, twitter API provide no more than 6-9 days of datas, so we will not be able to provide the full two year time period originally intended (we will instead start collecting data from now on).
+
+To be prepared for the optional deployment on a cloud service, we are going to use a virtual machine as test for all the phases of the project; that way we will be ready anytime to fully deploy everything on any platform.
