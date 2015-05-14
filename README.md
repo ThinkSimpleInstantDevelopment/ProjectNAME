@@ -3,7 +3,7 @@ Project N.A.M.E., or Not Always Meaningful Elements, coded with lots of love and
 
 
 
-* [Project Description] (../Docs/Description.md)
-* [Milestones] (../Docs/Milestones.md)
-* [Languages] (../Docs/Languages.md)
+* [Project Description] (..master/Docs/Description.md)
+* [Milestones] (..master/Docs/Milestones.md)
+* [Languages] (..master/Docs/Languages.md)
 
