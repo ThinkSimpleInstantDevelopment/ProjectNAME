@@ -1,0 +1,10 @@
+C:\Users\Aldo\documents\visual studio 2013\Projects\ProjectName.Presentation.DataAcces\ProjectName.Presentation.DataAcces\obj\Debug\ProjectName.Presentation.DataAcces.csprojResolveAssemblyReference.cache
+C:\Users\Aldo\documents\visual studio 2013\Projects\ProjectName.Presentation.DataAcces\ProjectName.Presentation.DataAcces\bin\Debug\ProjectName.Presentation.DataAcces.dll
+C:\Users\Aldo\documents\visual studio 2013\Projects\ProjectName.Presentation.DataAcces\ProjectName.Presentation.DataAcces\bin\Debug\ProjectName.Presentation.DataAcces.pdb
+C:\Users\Aldo\documents\visual studio 2013\Projects\ProjectName.Presentation.DataAcces\ProjectName.Presentation.DataAcces\bin\Debug\MongoDB.Bson.dll
+C:\Users\Aldo\documents\visual studio 2013\Projects\ProjectName.Presentation.DataAcces\ProjectName.Presentation.DataAcces\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\Aldo\documents\visual studio 2013\Projects\ProjectName.Presentation.DataAcces\ProjectName.Presentation.DataAcces\bin\Debug\MongoDB.Driver.dll
+C:\Users\Aldo\documents\visual studio 2013\Projects\ProjectName.Presentation.DataAcces\ProjectName.Presentation.DataAcces\bin\Debug\MongoDB.Bson.xml
+C:\Users\Aldo\documents\visual studio 2013\Projects\ProjectName.Presentation.DataAcces\ProjectName.Presentation.DataAcces\bin\Debug\MongoDB.Driver.xml
+C:\Users\Aldo\documents\visual studio 2013\Projects\ProjectName.Presentation.DataAcces\ProjectName.Presentation.DataAcces\obj\Debug\ProjectName.Presentation.DataAcces.dll
+C:\Users\Aldo\documents\visual studio 2013\Projects\ProjectName.Presentation.DataAcces\ProjectName.Presentation.DataAcces\obj\Debug\ProjectName.Presentation.DataAcces.pdb
