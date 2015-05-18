@@ -6,8 +6,6 @@ import json
 import requests
 
 def get_token(client_id, client_secret):
-    client_id = "Kbvd9oQNAF6cr9XULzoRu5b1n"
-    client_secret = "dNJOsK3gcOiJJmrVdA1jKAt2usjzauQwXpiQpPv9CJCpUfo67W"
     credentials = '{}:{}'.format(client_id, client_secret)
     credentials_b64 = base64.b64encode(credentials.encode())
     resp = requests.post(
@@ -44,23 +42,48 @@ def search_tweets(what, token):
     data = resp.json()
     return data['statuses']
 
+
 def save_tweets(tweets):
     count = 0
     for tweet in tweets:
         count += 1
-        destination = 'tweet'+str(count)
-        f_destination = open(destination, 'w+')
-        json.dump(tweet, f_destination)
+        cleanedTweet = resize(tweet)
+        f_destination = open('ggTweet'+str(count), 'w+')
+        json.dump(cleanedTweet, f_destination)
         f_destination.close()
+
+def resize(tweet):
+    data = {}
+    data['id_str'] = tweet['id_str']
+    data['created_at'] = tweet['created_at']
+    data['text'] = tweet['text']
+    data['favorite_count'] = tweet['favorite_count']
+    data['lang'] = tweet['lang']
+    data['coordinates'] = tweet['coordinates']
+    data['retweet_count'] = tweet['retweet_count']
+    data['place'] = tweet['place']
+    data['geo'] = tweet['geo']
+    hashtags = tweet['entities']['hashtags']
+    hashtag_list = []
+    for hashtag in hashtags:
+        hashtag_list.append(hashtag['text'])
+        data['hashtags'] = hashtag_list
+    data['user_geo_Enabled'] = tweet['user']['geo_enabled']
+    data['user_friends_count'] = tweet['user']['friends_count']
+    data['user_lang'] = tweet['user']['lang']
+    data['user_location'] = tweet['user']['location']
+    data['user_time_zone'] = tweet['user']['time_zone']
+    data['user_followers_count'] = tweet['user']['followers_count']
+    #json_data = json.dumps(data)
+    return data
 
 if __name__ == '__main__':
     import os
     import sys
     print('getting token...')
     token = get_token(
-        '3187020155-vjTxFyiyS2I13fDb1pLn2sFBjuLu0DIfvsyTAHi','nWoujP4PSOlIN1TrIpQ09lKXIDAyiJToddEcWuh6UyEnE'
-        #os.environ['TWITTER_APP_ID'],
-        #os.environ['TWITTER_APP_SECRET']
+        os.environ['TWITTER_APP_ID'],
+        os.environ['TWITTER_APP_SECRET']
     )
     print('getting tweets...')
     tweets = search_tweets(sys.argv[1], token)
