@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,10 +11,10 @@ namespace PresentationFrontEnd.Controllers
     public class StatController : ApiController
     {
         // GET: api/Stat
-        public IEnumerable<Stat> Get()
+        public IEnumerable<Stat> GetStat()
         {
-            DataAccess data = new DataAccess();
-            return data.Stat();
+            DataAccess.DataAccess data = new DataAccess.DataAccess();
+            return data.GetStat();
         }
 
         // GET: api/Stat/5
