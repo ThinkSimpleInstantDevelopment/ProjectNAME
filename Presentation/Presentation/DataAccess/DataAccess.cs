@@ -8,7 +8,7 @@ namespace DataAccess
 {
     public class DataAccess
     {
-        public IEnumerable<Stat> GetStat()
+        public IEnumerable<Stat> Test()
         {
             List<Stat> Dati = new List<Stat>();
 
