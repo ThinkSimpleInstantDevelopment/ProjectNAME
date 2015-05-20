@@ -3,6 +3,7 @@ Structure extracted from the tweets for the Retrieval part:
  Key | ValueType 
  :--- | :---------
  Id_str | str 
+ ProgrammingLanguage | str
  Created_at | str 
  Text | str 
  Favorite_count | int 
