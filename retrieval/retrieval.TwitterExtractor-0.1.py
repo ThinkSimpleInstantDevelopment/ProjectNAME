@@ -55,6 +55,7 @@ def save_tweets(tweets):
 def resize(tweet):
     data = {}
     data['id_str'] = tweet['id_str']
+    data['programming_language'] = str(prog_lang)
     data['created_at'] = tweet['created_at']
     data['text'] = tweet['text']
     data['favorite_count'] = tweet['favorite_count']
@@ -74,8 +75,24 @@ def resize(tweet):
     data['user_location'] = tweet['user']['location']
     data['user_time_zone'] = tweet['user']['time_zone']
     data['user_followers_count'] = tweet['user']['followers_count']
-    #json_data = json.dumps(data)
+    json_data = json.dumps(data)
     return data
+
+#ritorna una lista di stringhe contenente tutti i linguaggi presenti nel file programmingLanguages.md
+def get_prog_lang(file):
+    file = '.\programmingLanguages.md'
+    reader = open(file, 'r').read()
+    langList = reader.split(',')
+    return langList
+
+def save_in_db(tweetList):
+    import pymongo
+    #impostazioni predefinite
+    client = MongoClient('mongodb://localhost:27017/')
+    db = client.test_database
+    collection = db.test_collection
+    result = posts.insert_many(tweetList)
+    result.inserted_ids
 
 if __name__ == '__main__':
     import os
@@ -87,6 +104,7 @@ if __name__ == '__main__':
     )
     print('getting tweets...')
     tweets = search_tweets(sys.argv[1], token)
+    prog_lang = str(sys.argv[1])
     print('saving tweets...')
     save_tweets(tweets)
     print('OK!')
