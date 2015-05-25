@@ -9,7 +9,7 @@ import its.tsid.projectNAME.dataAccess.DbAccess;
 public class Program {
 
 	public static void main(String[] args) {
-		List<BasicDBObject> rawData = DbAccess.getData("localhost, 27017", "cleaning");
+		//List<BasicDBObject> rawData = DbAccess.getData("localhost, 27017", "cleaning");
 		
 
 	}
