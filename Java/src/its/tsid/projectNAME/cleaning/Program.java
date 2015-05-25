@@ -10,8 +10,9 @@ import its.tsid.projectNAME.dataAccess.DbAccess;
 public class Program {
 
 	public static void main(String[] args) {
-		List<BasicDBObject> cleaning = DbAccess.getData(
-				"localhost, 27071", "tweets");
+		String connectionString = "localhost, 27017";
+		List<BasicDBObject> cleaning = DbAccess.getData(connectionString,
+				"tweets");
 
 		List<String> validableLocations = new ArrayList<>();
 		// conditions.add("coordinates");
@@ -57,12 +58,27 @@ public class Program {
 		europeanCountyCode.add("FI");
 		europeanCountyCode.add("SE");
 		europeanCountyCode.add("UK");
+
 		for (Object d : cleaning) {
-			if (CleanProcesses.europeLocation(d, europeanCountyCode)) {
-				DbAccess.putObj("localhost, 27071", "cleaning", d);
+			if (!CleanProcesses.europeLocation(d, europeanCountyCode)) {
+				cleaning.remove(d);
 			}
 		}
 
+		String[] europeanLanguages = new String[] { "bg", "es", "cs", "da",
+				"de", "et", "el", "en", "fr", "ga", "hr", "it", "lv", "lt",
+				"hu", "mt", "np", "pl", "pt", "ro", "sk", "sl", "fi", "sv" };
+
+		for (Object d : cleaning) {
+			if (!CleanProcesses.europeLanguages(d, europeanLanguages)) {
+				cleaning.remove(d);
+			}
+		}
+
+		// adding up all the tweets still valid to the collection "Cleaning"
+		for (BasicDBObject dbo : cleaning) {
+			DbAccess.putObj(connectionString, "cleaning", dbo);
+		}
 	}
 
 }
