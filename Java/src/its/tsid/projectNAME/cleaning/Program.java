@@ -14,6 +14,7 @@ public class Program {
 		List<BasicDBObject> cleaning = DbAccess.getData(connectionString,
 				"tweets");
 
+		//removing all tweets with no validable field for a location
 		List<String> validableLocations = new ArrayList<>();
 		// conditions.add("coordinates");
 		validableLocations.add("place");
@@ -28,7 +29,7 @@ public class Program {
 			}
 		}
 
-		// List of European ISO Country Codes
+		// removing all non valid countries (based on iso codes)
 		List<String> europeanCountyCode = new ArrayList<>();
 		europeanCountyCode.add("BE");
 		europeanCountyCode.add("BG");
@@ -65,6 +66,8 @@ public class Program {
 			}
 		}
 
+		
+		//Removing invalid languages (all non-european)
 		String[] europeanLanguages = new String[] { "bg", "es", "cs", "da",
 				"de", "et", "el", "en", "fr", "ga", "hr", "it", "lv", "lt",
 				"hu", "mt", "np", "pl", "pt", "ro", "sk", "sl", "fi", "sv" };
