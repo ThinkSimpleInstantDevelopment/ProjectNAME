@@ -49,6 +49,7 @@ public class DbAccess {
 			// DBCollection collection = db.getCollection("tweets");
 			DBCollection cll = db.getCollection(collection);
 
+			//TODO correct query builder
 			//String query = null;
 			//DBCursor cursor = cll.aggregate( [ { $match : { programmingLanguage : proglanguage } } ]);
 			//try {
