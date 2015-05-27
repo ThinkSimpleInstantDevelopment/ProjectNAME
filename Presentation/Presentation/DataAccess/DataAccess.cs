@@ -22,7 +22,7 @@ namespace DataAccess
             Dati.Add(d1);
             Stat d2 = new Stat()
             {
-                Date = "20150501",
+                Date = "20150607",
                 Nation = "Germania",
                 Language = "Java",
                 Value = 109
@@ -31,7 +31,7 @@ namespace DataAccess
 
             Stat d3 = new Stat()
             {
-                Date = "20150501",
+                Date = "20120510",
                 Nation = "UK",
                 Language = "Python",
                 Value = 70
@@ -40,7 +40,7 @@ namespace DataAccess
 
             Stat d4 = new Stat()
             {
-                Date = "20150501",
+                Date = "20130502",
                 Nation = "Belgio",
                 Language = "C#",
                 Value = 90
@@ -49,7 +49,7 @@ namespace DataAccess
 
             Stat d5 = new Stat()
             {
-                Date = "20150501",
+                Date = "20150301",
                 Nation = "Francia",
                 Language = "HTML",
                 Value = 80
@@ -58,7 +58,7 @@ namespace DataAccess
 
             Stat d6 = new Stat()
             {
-                Date = "20150501",
+                Date = "20151201",
                 Nation = "Francia",
                 Language = "Python",
                 Value = 80
@@ -67,7 +67,7 @@ namespace DataAccess
 
             Stat d7 = new Stat()
             {
-                Date = "20150501",
+                Date = "20140101",
                 Nation = "UK",
                 Language = "Java",
                 Value = 80
@@ -76,7 +76,7 @@ namespace DataAccess
 
             Stat d8 = new Stat()
             {
-                Date = "20150501",
+                Date = "20150517",
                 Nation = "Belgio",
                 Language = "HTML",
                 Value = 40
@@ -85,7 +85,7 @@ namespace DataAccess
 
             Stat d9 = new Stat()
             {
-                Date = "20150501",
+                Date = "20151001",
                 Nation = "UK",
                 Language = "Javascript",
                 Value = 78
@@ -94,7 +94,7 @@ namespace DataAccess
 
             Stat d10 = new Stat()
             {
-                Date = "20150501",
+                Date = "20150522",
                 Nation = "Italia",
                 Language = "Javascript",
                 Value = 88
@@ -103,7 +103,7 @@ namespace DataAccess
 
             Stat d11 = new Stat()
             {
-                Date = "20150501",
+                Date = "20150820",
                 Nation = "Germania",
                 Language = "C#",
                 Value = 98
