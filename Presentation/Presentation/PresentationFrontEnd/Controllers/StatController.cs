@@ -14,8 +14,11 @@ namespace PresentationFrontEnd.Controllers
         public IEnumerable<Stat> GetStat()
         {
             DataAccess.DataAccess data = new DataAccess.DataAccess();
-            return data.GetStat();
+            return data.Test();
+            //return data.GetStat();
         }
+        
+        
 
         // GET: api/Stat/5
         public string Get(int id)

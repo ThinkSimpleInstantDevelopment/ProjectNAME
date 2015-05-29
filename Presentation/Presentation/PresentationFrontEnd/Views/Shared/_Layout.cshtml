@@ -8,29 +8,45 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <div class="container">
+        <div class=" row">
+            <div class="col-sm-12">
+                <div class="testata"><h1> TWEETS EXTRACTION PROJECT</h1></div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
-                </ul>
+
+            <div class="row">
+
+                <div class="col-sm-4">
+                    <div><h2>Graphics</h2></div>
+                </div>
+                <div class="col-sm-4">
+                    <div><h2>Devolopers</h2></div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-4"><div>a</div></div>
+                <div class="col-sm-4">
+                    <div class="table">
+                        <input type="checkbox" /> Italy <br />
+                        <input type="checkbox" /> Belgium <br />
+                        <input type="checkbox" /> UK <br />
+                        <input type="checkbox" /> Germenay <br />
+                        <input type="checkbox" /> France <br />
+                        
+
+                    </div>
+                </div>
+                <div class="col-sm-4"><div>c</div></div>
+
             </div>
         </div>
-    </div>
-    <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - TSiD</p>
         </footer>
     </div>
 

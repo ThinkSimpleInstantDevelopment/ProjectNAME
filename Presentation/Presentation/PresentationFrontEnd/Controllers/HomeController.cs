@@ -14,5 +14,12 @@ namespace PresentationFrontEnd.Controllers
 
             return View();
         }
+
+        public ActionResult LineChart()
+        {
+            ViewBag.Title = "LineChart";
+
+            return View();
+        }
     }
 }

@@ -1,14 +1,10 @@
 ﻿<html>
 <head>
-    <title></title>
+    <title>Tabel chart</title>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["table"]});
       google.setOnLoadCallback(drawTable);
-
-
-
-
 
       function drawTable() {
           var data = new google.visualization.DataTable();
@@ -25,7 +21,7 @@
 
               for (var i = 0; i < list.length; i++) {
                   var obj = list[i];
-                      data.addRow([obj.Nation, obj.Language, obj.Date, obj.Value])
+                  data.addRow([obj.Nation, obj.Language, obj.Date, obj.Value])
               }
               var table = new google.visualization.Table(document.getElementById('table_div'));
 
@@ -35,12 +31,7 @@
               alert('Errore nel recupero dei dati.');
           });
 
-
-
-
-
-
-      }
+          }
     </script>
 </head>
 <body>

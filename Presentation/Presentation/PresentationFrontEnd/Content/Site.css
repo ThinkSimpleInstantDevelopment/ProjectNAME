@@ -15,3 +15,13 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+.testata{
+    text-align:center;
+}
+
+.table{
+    border:solid;
+    border-color:black;
+}
