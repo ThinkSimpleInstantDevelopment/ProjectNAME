@@ -38,7 +38,35 @@ public class DbAccess {
 		return dbo;
 	}
 
-	public static List<BasicDBObject> getSpecificData(String client,
+	
+	public static void moveObj(String client, String origin, String destination, Checker checker){
+		MongoClient mongoclient;
+		try {
+			mongoclient = new MongoClient(client);
+			DB db = mongoclient.getDB("test");
+			DBCollection cllOrigin = db.getCollection(origin);
+			DBCollection cllDestination = db.getCollection(destination);
+			
+			DBCursor cursor = cllOrigin.find();
+			try {
+				while (cursor.hasNext()) {
+					cllDestination.insert(checker.validator(cursor.next()));
+				}
+			} finally {
+				cursor.close();
+			}
+			
+		} catch (Exception e) {
+			System.err.println(e.getClass().getName() + ": " + e.getMessage());
+		}
+		
+		
+		
+		
+	}
+	
+	
+	/*public static List<BasicDBObject> getSpecificData(String client,
 			String collection, String progLanguage) {
 		List<BasicDBObject> dbo = new ArrayList<>();
 		try {
@@ -48,7 +76,7 @@ public class DbAccess {
 
 			// DBCollection collection = db.getCollection("tweets");
 			DBCollection cll = db.getCollection(collection);
-
+			cll.getFullName();
 			//TODO correct query builder
 			//String query = null;
 			//DBCursor cursor = cll.aggregate( [ { $match : { programmingLanguage : proglanguage } } ]);
@@ -66,7 +94,9 @@ public class DbAccess {
 
 		return dbo;
 	}
-
+*/
+	
+	
 	public static void putObj(String client, String collection, Object d) {
 		try {
 			MongoClient mongo = new MongoClient(client);
@@ -80,5 +110,7 @@ public class DbAccess {
 		}
 
 	}
+	
+	
 
 }

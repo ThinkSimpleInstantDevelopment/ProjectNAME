@@ -1,8 +1,8 @@
 package its.tsid.projectNAME.cleaning;
 
-import java.util.List;
-
 import org.bson.BasicBSONObject;
+
+import com.mongodb.BasicDBObject;
 
 public class CleanProcesses {
 
@@ -11,14 +11,14 @@ public class CleanProcesses {
 	 * 
 	 * @param d
 	 *            : tweet to be checked
-	 * @param conditions
+	 * @param validableLocations
 	 *            : list of key that must be !null
 	 * @return TRUE if the tweet has at least one valid location hint passed as @conditions
 	 */
-	public static boolean validableLocation(Object d, List<String> conditions) {
+	public static boolean validableLocation(BasicDBObject d, String[] validableLocations) {
 		boolean check = false;
-		for (String cond : conditions) {
-			if (((BasicBSONObject) d).get(cond) != null) {
+		for (String cond : validableLocations) {
+			if (d.get(cond) != null) {
 				check = true;
 			}
 		}
@@ -31,17 +31,17 @@ public class CleanProcesses {
 	 * 
 	 * @param d
 	 *            : Object to be controlled
-	 * @param countryCodes
+	 * @param europeanCountyCode
 	 *            : list of iso country codes to be searched
 	 * @return TRUE if the tweet was sent from a country in the list provided
 	 */
-	public static boolean europeLocation(Object d, List<String> countryCodes) {
+	public static boolean europeLocation(Object d, String[] europeanCountyCode) {
 		boolean check = false;
 		String tweetCountry = ((BasicBSONObject) d).get("place").toString();
 		String userCountry = ((BasicBSONObject) d).getString("userLocation")
 				.toString();
 
-		for (String country : countryCodes) {
+		for (String country : europeanCountyCode) {
 			if (tweetCountry.contains(country) || userCountry.contains(country)) {
 				check = true;
 			}

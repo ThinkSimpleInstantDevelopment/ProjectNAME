@@ -1,6 +1,5 @@
 package its.tsid.projectNAME.cleaning;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.mongodb.BasicDBObject;
@@ -14,51 +13,26 @@ public class Program {
 		List<BasicDBObject> cleaning = DbAccess.getData(connectionString,
 				"tweets");
 
-		//removing all tweets with no validable field for a location
-		List<String> validableLocations = new ArrayList<>();
-		// conditions.add("coordinates");
-		validableLocations.add("place");
-		validableLocations.add("userLocation");
-		// conditions.add("userGeo_Enabled ");
-		validableLocations.add("userTime_zone");
-		validableLocations.add("lang");
+		// removing all tweets with no validable field for a location
+		// TODO: Import list from db.util.conditions
+		String[] validableLocations = new String[] {
+				// "coordinates"
+				"place", "userLocation",
+				// "userGeo_Enabled",
+				"userTime_zone", "lang" };
 
-		for (Object d : cleaning) {
+		for (BasicDBObject d : cleaning) {
 			if (!CleanProcesses.validableLocation(d, validableLocations)) {
 				cleaning.remove(d);
 			}
 		}
 
 		// removing all non valid countries (based on iso codes)
-		List<String> europeanCountyCode = new ArrayList<>();
-		europeanCountyCode.add("BE");
-		europeanCountyCode.add("BG");
-		europeanCountyCode.add("CZ");
-		europeanCountyCode.add("DK");
-		europeanCountyCode.add("DE");
-		europeanCountyCode.add("EE");
-		europeanCountyCode.add("IE");
-		europeanCountyCode.add("EL");
-		europeanCountyCode.add("ES");
-		europeanCountyCode.add("FR");
-		europeanCountyCode.add("HR");
-		europeanCountyCode.add("IT");
-		europeanCountyCode.add("CY");
-		europeanCountyCode.add("LV");
-		europeanCountyCode.add("LT");
-		europeanCountyCode.add("LU");
-		europeanCountyCode.add("HU");
-		europeanCountyCode.add("MT");
-		europeanCountyCode.add("NL");
-		europeanCountyCode.add("AT");
-		europeanCountyCode.add("PL");
-		europeanCountyCode.add("PT");
-		europeanCountyCode.add("RO");
-		europeanCountyCode.add("SI");
-		europeanCountyCode.add("SK");
-		europeanCountyCode.add("FI");
-		europeanCountyCode.add("SE");
-		europeanCountyCode.add("UK");
+		// TODO: Import list from db.util.countrycodes
+		String[] europeanCountyCode = new String[] { "BE", "BG", "CZ", "DK",
+				"DE", "EE", "IE", "EL", "ES", "FR", "HR", "IT", "CY", "LV",
+				"LT", "LU", "HU", "MT", "NL", "AT", "PL", "PT", "RO", "SI",
+				"SK", "FI", "SE", "UK" };
 
 		for (Object d : cleaning) {
 			if (!CleanProcesses.europeLocation(d, europeanCountyCode)) {
@@ -66,8 +40,8 @@ public class Program {
 			}
 		}
 
-		
-		//Removing invalid languages (all non-european)
+		// Removing invalid languages (all non-european)
+		// TODO: Import list from db.util.europeanlanguages
 		String[] europeanLanguages = new String[] { "bg", "es", "cs", "da",
 				"de", "et", "el", "en", "fr", "ga", "hr", "it", "lv", "lt",
 				"hu", "mt", "np", "pl", "pt", "ro", "sk", "sl", "fi", "sv" };

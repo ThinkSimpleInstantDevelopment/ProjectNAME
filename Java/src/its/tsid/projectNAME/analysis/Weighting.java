@@ -2,14 +2,11 @@ package its.tsid.projectNAME.analysis;
 
 import java.util.Date;
 import java.util.Map;
-
-import org.bson.BSONObject;
-
 import com.mongodb.BasicDBObject;
 
 public class Weighting {
 
-	public static BSONObject weight(Map<String, Double> weights,
+	public static BasicDBObject weight(Map<String, Double> weights,
 			BasicDBObject bson) {
 		double value = (double) weights.get("baseValue");
 		value *= (1.0 + ((Integer
