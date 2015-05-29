@@ -2,23 +2,23 @@ package its.tsid.projectNAME.cleaning;
 
 import org.bson.BasicBSONObject;
 
-import com.mongodb.BasicDBObject;
+import com.mongodb.DBObject;
 
 public class CleanProcesses {
 
 	/**
 	 * Method to check for validable location hint
 	 * 
-	 * @param d
+	 * @param input
 	 *            : tweet to be checked
 	 * @param validableLocations
 	 *            : list of key that must be !null
 	 * @return TRUE if the tweet has at least one valid location hint passed as @conditions
 	 */
-	public static boolean validableLocation(BasicDBObject d, String[] validableLocations) {
+	public static boolean validableLocation(DBObject input, String[] validableLocations) {
 		boolean check = false;
 		for (String cond : validableLocations) {
-			if (d.get(cond) != null) {
+			if (input.get(cond) != null) {
 				check = true;
 			}
 		}
