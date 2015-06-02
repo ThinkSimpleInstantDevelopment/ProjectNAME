@@ -24,18 +24,27 @@ textarea {
 }
 
 
-#header {
-    height: 70px;
+#color {
+    border-radius: 10px;
+    height: 140px;
     text-align: center;
     border: solid;
     border-color: black;
-    background-color: #e27965;
+
+    background-color: #ff6a00;
     color: black;
-    font-size:60px;
+    font-size:75px;
     text-decoration:double white;
-    text-shadow: 1px 1px 0 #fff;
-    font-family: 'Princetown ICG';
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+    font-family: 'Princetown Solid-Normal';
 }
+
+@font-face {
+    font-family: 'Princetown Solid-Normal';
+    src: url('Princetown Solid-Normal.ttf') format('truetype');
+}
+
 
 
 @font-face {
@@ -44,18 +53,26 @@ textarea {
 }
 
 .table {
-    border-radius: 25px;
+    border-radius: 10px;
     border: solid;
     border-color: black;
     padding-left: 20px;
     padding-top: 10px;
     height: 200px;
-    background-image: url('s_flag.jpg');
     background-size: cover;
     color: #ffffff;
     font-family: 'Princetown ICG';
-    text-decoration:double black;
-    font-size:25px;
-    
+    text-decoration: double black;
+    font-size: 25px;
+    background-image: url('conf flag 3.jpg');
 }
 
+h2{
+    font-family: 'Princetown ICG';
+    color: #ff6a00;
+    on
+}
+
+h2:hover { 
+    color: #37715d;
+}

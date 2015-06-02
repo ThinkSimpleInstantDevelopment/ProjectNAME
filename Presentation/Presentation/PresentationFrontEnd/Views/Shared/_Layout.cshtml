@@ -12,40 +12,36 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-12" id="header">
-                <h1>
-                    TWEETS EXTRACTION PROJECT                   
-                </h1>
-                <h2>Project N.A.M.E.</h2>
+            <div class="col-sm-12">
+                <div id="color">
+                    <p>TWEETS EXTRACTION PROJECT</p>
+                </div>
             </div>
         </div>
-        <div class="row">
 
+        <div class="row">
             <div class="col-sm-4">
                 <div><h2>Graphics</h2></div>
             </div>
             <div class="col-sm-4">
-                <div><h2>Devolopers</h2></div>
+                <div><h2>Developers</h2></div>
             </div>
-
         </div>
 
         <div class="row">
-
             <div class="col-sm-4">
                 <div class="table">
                     <p>From Date:<input type="date"></p>
                     <p>To Date:<input type="date"></p>
-
                 </div>
             </div>
 
             <div class="col-sm-4">
                 <div class="table">
-                    <input type="checkbox" id="letter" /> Italy <br />
+                    <input type="checkbox" /> Italy <br />
                     <input type="checkbox" /> Belgium <br />
                     <input type="checkbox" /> UK <br />
-                    <input type="checkbox" /> Germenay <br />
+                    <input type="checkbox" /> Germany <br />
                     <input type="checkbox" /> France <br />
                 </div>
             </div>
@@ -60,12 +56,25 @@
             </div>
 
         </div>
+
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-8">
+                @RenderBody()
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                &copy; @DateTime.Now.Year - TSiD
+            </div>
+        </div>
+
+
+
     </div>
-    @RenderBody()
-    <footer>
-        <p>&copy; @DateTime.Now.Year - TSiD</p>
-    </footer>
-    </div>
+
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

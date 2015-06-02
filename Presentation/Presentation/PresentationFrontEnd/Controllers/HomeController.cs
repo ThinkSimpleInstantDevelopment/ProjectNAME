@@ -21,5 +21,12 @@ namespace PresentationFrontEnd.Controllers
 
             return View();
         }
+
+        public ActionResult Developers()
+        {
+            ViewBag.Title = "Developers";
+
+            return View();
+        }
     }
 }

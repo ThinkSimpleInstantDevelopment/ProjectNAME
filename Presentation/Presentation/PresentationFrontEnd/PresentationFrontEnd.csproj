@@ -215,6 +215,8 @@
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\conf flag 3.jpg" />
+    <Content Include="Content\confederate-flag.jpg" />
     <Content Include="Content\general-lee-cars-.jpg" />
     <Content Include="Content\s_flag.jpg" />
     <Content Include="favicon.ico" />
@@ -242,6 +244,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <Content Include="Content\Princetown ICG.ttf" />
+    <Content Include="Content\Princetown Solid-Normal.ttf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -271,6 +274,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\LineChart.cshtml" />
+    <Content Include="Views\Home\Developers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
