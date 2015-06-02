@@ -8,46 +8,63 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+
+
     <div class="container">
-        <div class=" row">
-            <div class="col-sm-12">
-                <div class="testata"><h1> TWEETS EXTRACTION PROJECT</h1></div>
-            </div>
-
-            <div class="row">
-
-                <div class="col-sm-4">
-                    <div><h2>Graphics</h2></div>
-                </div>
-                <div class="col-sm-4">
-                    <div><h2>Devolopers</h2></div>
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="col-sm-4"><div>a</div></div>
-                <div class="col-sm-4">
-                    <div class="table">
-                        <input type="checkbox" /> Italy <br />
-                        <input type="checkbox" /> Belgium <br />
-                        <input type="checkbox" /> UK <br />
-                        <input type="checkbox" /> Germenay <br />
-                        <input type="checkbox" /> France <br />
-                        
-
-                    </div>
-                </div>
-                <div class="col-sm-4"><div>c</div></div>
-
+        <div class="row">
+            <div class="col-sm-12" id="header">
+                <h1>
+                    TWEETS EXTRACTION PROJECT                   
+                </h1>
+                <h2>Project N.A.M.E.</h2>
             </div>
         </div>
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - TSiD</p>
-        </footer>
+        <div class="row">
+
+            <div class="col-sm-4">
+                <div><h2>Graphics</h2></div>
+            </div>
+            <div class="col-sm-4">
+                <div><h2>Devolopers</h2></div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-4">
+                <div class="table">
+                    <p>From Date:<input type="date"></p>
+                    <p>To Date:<input type="date"></p>
+
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="table">
+                    <input type="checkbox" id="letter" /> Italy <br />
+                    <input type="checkbox" /> Belgium <br />
+                    <input type="checkbox" /> UK <br />
+                    <input type="checkbox" /> Germenay <br />
+                    <input type="checkbox" /> France <br />
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="table">
+                    <input type="checkbox" /> C#<br />
+                    <input type="checkbox" /> Java <br />
+                    <input type="checkbox" /> Python <br />
+                    <input type="checkbox" /> Javascript <br />
+                </div>
+            </div>
+
+        </div>
+    </div>
+    @RenderBody()
+    <footer>
+        <p>&copy; @DateTime.Now.Year - TSiD</p>
+    </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

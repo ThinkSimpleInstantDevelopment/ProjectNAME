@@ -1,6 +1,13 @@
-﻿body {
+﻿@font-face {
+	font-family: Princetown ICG;
+	src: url('C:\Users\edoardo\Desktop\Princetown ICG.ttf') format('truetype');
+}
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url('general-lee-cars-.jpg');
+    background-size:cover;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -17,11 +24,38 @@ textarea {
 }
 
 
-.testata{
-    text-align:center;
+#header {
+    height: 70px;
+    text-align: center;
+    border: solid;
+    border-color: black;
+    background-color: #e27965;
+    color: black;
+    font-size:60px;
+    text-decoration:double white;
+    text-shadow: 1px 1px 0 #fff;
+    font-family: 'Princetown ICG';
 }
 
-.table{
-    border:solid;
-    border-color:black;
+
+@font-face {
+    font-family: 'Princetown ICG';
+    src: url('Princetown ICG.ttf') format('truetype');
 }
+
+.table {
+    border-radius: 25px;
+    border: solid;
+    border-color: black;
+    padding-left: 20px;
+    padding-top: 10px;
+    height: 200px;
+    background-image: url('s_flag.jpg');
+    background-size: cover;
+    color: #ffffff;
+    font-family: 'Princetown ICG';
+    text-decoration:double black;
+    font-size:25px;
+    
+}
+

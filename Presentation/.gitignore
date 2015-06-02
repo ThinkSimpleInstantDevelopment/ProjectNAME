@@ -1,0 +1,9 @@
+*.suo
+*.user
+*.sln.docstates
+[Dd]ebag/
+[Rr]eleas/
+x64/
+build/
+[Bb]in/
+[Oo]bj/

@@ -1,0 +1,54 @@
+﻿<html>
+<head>
+    <title>Tabel chart</title>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", { packages: ["line"] });
+        google.setOnLoadCallback(drawTable);
+
+        function drawTable() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Date');
+            data.addColumn('string', 'Language');
+
+            $.ajax({
+                url: '/api/Stat',
+                dataType: 'JSON',
+                type: 'GET'
+            }).done(function (list) {
+               
+                for (var t in list) {
+                    var obj = [];
+                    if (t.Nation == "Italia")
+                        obj.add(t);
+                }
+
+                for (var t = 0 ; t <= obj.length; t++) {
+                        data.addRow([t.Date,t.Language])
+                }
+            
+
+                var options = {
+                    chart: {
+                        title: 'Box Office Earnings in First Two Weeks of Opening',
+                        subtitle: 'in millions of dollars (USD)'
+                    },
+                    width: 900,
+                    height: 500
+                };
+
+                var chart = new google.charts.Line(document.getElementById('table_div'));
+
+                chart.draw(data, options);
+
+            }).fail(function (error) {
+                alert('Errore nel recupero dei dati.');
+            });
+
+        }
+    </script>
+</head>
+<body>
+    <div id="table_div"></div>
+</body>
+</html>
