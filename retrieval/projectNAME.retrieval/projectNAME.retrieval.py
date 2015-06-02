@@ -9,14 +9,17 @@ from logentries import LogentriesHandler
 
 
 def logger():
+    '''
+    set the logentries logging service
+    '''
     log = logging.getLogger('getTweets')
     log.setLevel(logging.INFO)
     log.addHandler(LogentriesHandler('21e95b59-8391-4f27-bf6f-d81894860920'))
     return log
 
-
 '''
 get the token to make requests to twitter from client id and secret
+return the access token needed to make requests
 '''
 def get_token(client_id, client_secret):
     #client_id = TWITTER_CLIENT_ID
@@ -45,8 +48,7 @@ def get_token(client_id, client_secret):
 # errore 429 all'esaurimento delle richieste per i 15min
 def search_tweets(what, token):
     '''
-    Returns:
-      a list of tweets (dictionaries)
+    Return a list of tweets (dictionaries)
     '''
     url = 'https://api.twitter.com/1.1/search/tweets.json'
     resp = requests.get(
@@ -59,7 +61,7 @@ def search_tweets(what, token):
     return data['statuses']
 
 '''
-save raw tweets on a json file
+save raw tweets on json files
 '''
 def save_tweets(tweets):
     count = 0
@@ -70,7 +72,7 @@ def save_tweets(tweets):
         f_destination.close()
 
 '''
-save customized tweets on a json file
+save customized tweets on json files
 '''
 def save_tweets_on_jsonfile(tweets):
     count = 0
@@ -83,7 +85,7 @@ def save_tweets_on_jsonfile(tweets):
     f_destination.close()
 
 '''
-create a list of customized tweets from raw tweets
+create a list of customized tweets from a list of raw tweets
 '''
 def resize_cicle(tweets):
     data_list = []
@@ -111,11 +113,11 @@ def resize_cicle(tweets):
         data['user_time_zone'] = tweet['user']['time_zone']
         data['user_followers_count'] = tweet['user']['followers_count']
         #json_data = json.dumps(data)
-	data_list.append(data)
+    data_list.append(data)
     return data_list
 
 '''
-returns a list of strings from a file
+get the programming languages to search from a programmingLanguages.md in the same directory
 '''
 def get_prog_lang():
     file = './programmingLanguages.md'
@@ -124,7 +126,7 @@ def get_prog_lang():
     return langList
 
 '''
-save datas in mongoDB
+save a list of tweet in mongoDB
 '''
 def save_in_db(tweetList):
     from pymongo import MongoClient
@@ -155,10 +157,10 @@ if __name__ == '__main__':
         custom_tweets = resize_cicle(tweets)
         #print(' saving'+prog_lang+' tweets...')
         log.info('saving '+prog_lang+' tweets...')
-	tweetNum = len(custom_tweets)
-	tweetTotal += tweetNum
+    tweetNum = len(custom_tweets)
+    tweetTotal += tweetNum
         save_in_db(custom_tweets)
         print(prog_lang + ' ok')
-	log.info(''+ str(tweetNum) +' '+ prog_lang +  ' tweets added')
+    log.info(''+ str(tweetNum) +' '+ prog_lang +  ' tweets added')
     print('done')
     log.info('done, totally added '+ str(tweetTotal) +' tweets')
