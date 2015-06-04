@@ -1,0 +1,16 @@
+C:\Users\Giovanni Luisotto\ProjectNAME\Presentation\ProjectName.Presentation.DataAcces\DataAccessTest\DataAccessTest\bin\Debug\DataAccessTest.exe.config
+C:\Users\Giovanni Luisotto\ProjectNAME\Presentation\ProjectName.Presentation.DataAcces\DataAccessTest\DataAccessTest\bin\Debug\DataAccessTest.exe
+C:\Users\Giovanni Luisotto\ProjectNAME\Presentation\ProjectName.Presentation.DataAcces\DataAccessTest\DataAccessTest\bin\Debug\DataAccessTest.pdb
+C:\Users\Giovanni Luisotto\ProjectNAME\Presentation\ProjectName.Presentation.DataAcces\DataAccessTest\DataAccessTest\bin\Debug\MongoDB.Bson.dll
+C:\Users\Giovanni Luisotto\ProjectNAME\Presentation\ProjectName.Presentation.DataAcces\DataAccessTest\DataAccessTest\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\Giovanni Luisotto\ProjectNAME\Presentation\ProjectName.Presentation.DataAcces\DataAccessTest\DataAccessTest\bin\Debug\MongoDB.Driver.dll
+C:\Users\Giovanni Luisotto\ProjectNAME\Presentation\ProjectName.Presentation.DataAcces\DataAccessTest\DataAccessTest\bin\Debug\MongoDB.Driver.Legacy.dll
+C:\Users\Giovanni Luisotto\ProjectNAME\Presentation\ProjectName.Presentation.DataAcces\DataAccessTest\DataAccessTest\bin\Debug\MongoDB.Bson.xml
+C:\Users\Giovanni Luisotto\ProjectNAME\Presentation\ProjectName.Presentation.DataAcces\DataAccessTest\DataAccessTest\bin\Debug\MongoDB.Driver.xml
+C:\Users\Giovanni Luisotto\ProjectNAME\Presentation\ProjectName.Presentation.DataAcces\DataAccessTest\DataAccessTest\bin\Debug\MongoDB.Driver.Legacy.xml
+C:\Users\Giovanni Luisotto\ProjectNAME\Presentation\ProjectName.Presentation.DataAcces\DataAccessTest\DataAccessTest\obj\Debug\DataAccessTest.csprojResolveAssemblyReference.cache
+C:\Users\Giovanni Luisotto\ProjectNAME\Presentation\ProjectName.Presentation.DataAcces\DataAccessTest\DataAccessTest\obj\Debug\DataAccessTest.exe
+C:\Users\Giovanni Luisotto\ProjectNAME\Presentation\ProjectName.Presentation.DataAcces\DataAccessTest\DataAccessTest\obj\Debug\DataAccessTest.pdb
+C:\Users\Giovanni Luisotto\Desktop\DataAccessTest\DataAccessTest\bin\Debug\DataAccessTest.exe.config
+C:\Users\Giovanni Luisotto\Desktop\DataAccessTest\DataAccessTest\obj\Debug\DataAccessTest.exe
+C:\Users\Giovanni Luisotto\Desktop\DataAccessTest\DataAccessTest\obj\Debug\DataAccessTest.csprojResolveAssemblyReference.cache
