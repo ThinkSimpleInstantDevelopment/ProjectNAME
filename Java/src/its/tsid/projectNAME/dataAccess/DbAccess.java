@@ -64,6 +64,7 @@ public class DbAccess {
 			DBCursor cursor = cllOrigin.find();
 			try {
 				while (cursor.hasNext()) {
+					//TODO: use lambda expression for better code optimization
 					cllDestination.insert(checker.validator(cursor.next()));
 				}
 			} finally {
