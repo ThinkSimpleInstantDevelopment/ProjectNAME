@@ -110,8 +110,7 @@ def resize_cicle(tweets):
         data['user_location'] = tweet['user']['location']
         data['user_time_zone'] = tweet['user']['time_zone']
         data['user_followers_count'] = tweet['user']['followers_count']
-        #json_data = json.dumps(data)
-	data_list.append(data)
+        data_list.append(data)
     return data_list
 
 '''
@@ -155,10 +154,10 @@ if __name__ == '__main__':
         custom_tweets = resize_cicle(tweets)
         #print(' saving'+prog_lang+' tweets...')
         log.info('saving '+prog_lang+' tweets...')
-	tweetNum = len(custom_tweets)
-	tweetTotal += tweetNum
-        save_in_db(custom_tweets)
-        print(prog_lang + ' ok')
-	log.info(''+ str(tweetNum) +' '+ prog_lang +  ' tweets added')
+        tweetNum = len(custom_tweets)
+        tweetTotal += tweetNum
+    save_in_db(custom_tweets)
+    print(prog_lang + ' ok')
+    log.info(''+ str(tweetNum) +' '+ prog_lang +  ' tweets added')
     print('done')
     log.info('done, totally added '+ str(tweetTotal) +' tweets')
