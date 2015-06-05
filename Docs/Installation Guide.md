@@ -7,3 +7,5 @@
 5. Run the Analysis program
 6. Use mongo to aggregate the datas from Analysis based on the granularity you desire (ex: days, week, years, eccetera)
 7. Use a frontend for the Presentation part
+
+Alternatively, we can provide a vm pre-installed and ready to go!
