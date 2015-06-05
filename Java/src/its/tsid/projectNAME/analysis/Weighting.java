@@ -24,7 +24,7 @@ public class Weighting {
 	 * @return an int (truncated) value for the tweet, simbolizing its weight on
 	 *         the final stats
 	 */
-	public static int weight(Map<String, Double> weights, double baseValue,
+	public static double weight(Map<String, Double> weights, double baseValue,
 			int favorites, int retweets, boolean hashtags, int friends,
 			int followers) {
 		double value = baseValue;
@@ -34,7 +34,7 @@ public class Weighting {
 		value *= (1.0 + (friends / 1000) * weights.get("friends"));
 		value *= (1.0 + (followers / 10000) * weights.get("followers"));
 
-		return (int) value;
+		return value;
 
 	}
 }

@@ -10,24 +10,19 @@ import its.tsid.projectNAME.dataAccess.Checker;
 
 public class Analyzer extends Checker {
 
-	// TODO: Import map from db.util.weights
-	// Weight map for the analysis
-	final Map<String, Double> weights = new TreeMap<String, Double>() {
-		private static final long serialVersionUID = 1L;
-
-		{
-			Double d = 0.01;
-			weights.put("baseValue", d * 50);
-			weights.put("favorites", d * 5);
-			weights.put("retweets", d);
-			weights.put("hashtags", d * 100);
-			weights.put("friends", d);
-			weights.put("followers", d * 10);
-		}
-	};
-
 	@Override
 	public BasicDBObject validator(DBObject input) {
+		// TODO: Import map from db.util.weights
+		// Weight map for the analysis
+		Map<String, Double> weights = new TreeMap<String, Double>();
+
+		Double d = 0.01;
+		weights.put("favorites", d * 5);
+		weights.put("retweets", d);
+		weights.put("hashtags", d * 100);
+		weights.put("friends", d);
+		weights.put("followers", d * 10);
+
 		// Calculating the tweets's weight
 		double baseValue = (double) input.get("BaseValue");
 		int favorites = (int) input.get("Favorites");
@@ -36,14 +31,14 @@ public class Analyzer extends Checker {
 		int friends = (int) input.get("Friends");
 		int followers = (int) input.get("Followers");
 
-		int value = Weighting.weight(weights, baseValue, favorites, retweets,
-				hashtags, friends, followers);
+		double value = Weighting.weight(weights, baseValue, favorites,
+				retweets, hashtags, friends, followers);
 
 		// Generating output bson datas
 		BasicDBObject output = new BasicDBObject();
 		output.put("Date", input.get("Date"));
 		output.put("Nation", input.get("Nation"));
-		output.put("Language", input.get("ProgLang"));
+		output.put("ProgLang", input.get("ProgLang"));
 		output.put("Value", value);
 
 		return output;

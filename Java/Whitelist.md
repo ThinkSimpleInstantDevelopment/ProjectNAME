@@ -11,7 +11,7 @@
 
 ProgrammingLanguage | Whitelist | Blacklist 
 :------------------ | :---------| :----------
-Java | app | cup, coffee, isle, sea, New York, NY, Ohio, Cigarette
+Java | app | cup, coffee, isle, sea, New York, NY, Ohio, Cigarette, Indonesia, Trench
 Python |  app | animal, long, eat
 C# |  | 
 Cobol |  | evil, cobold
